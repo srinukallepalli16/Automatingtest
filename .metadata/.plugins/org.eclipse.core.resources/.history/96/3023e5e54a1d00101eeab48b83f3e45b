@@ -1,0 +1,24 @@
+package com.btptest.automatebtp;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	try {
+    		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+            WebDriver driver = new ChromeDriver();
+            
+    	}
+    	catch(Exception e) {
+    		System.out.println("Exception"+e);
+    	}
+    	
+    
+    
+    }
+}

@@ -1,0 +1,53 @@
+package com.btptest.automatebtp;
+
+import java.util.Base64;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	try {
+    		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+            WebDriver driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.get("https://accounts.sap.com/oauth2/authorize?response_type=code&scope=openid+email+profile&redirect_uri=https%3A%2F%2Fcockpit.hanatrial.ondemand.com%2Flogin%2Fcallback&client_id=9868c363-bc2d-407f-bc14-2ef649230f6f&state=y7xk45KSWx_Oy49PzqsGrA&code_challenge=amBPGze5l7pqZw9sseVygpPh63jjU5mhHlv1ivgoghE&code_challenge_method=S256");
+            
+            WebDriverWait wait = new WebDriverWait(driver,20);
+            //Define the Fields
+            WebElement oUsername, oPassword,oBtn,signin,trailbtn; 
+            //Get the Usernames
+            oUsername = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("j_username")));
+            oUsername.sendKeys("srinudavid33@gmail.com");
+            // Get Button
+            oBtn = driver.findElement(By.id("logOnFormSubmit"));
+            oBtn.click();
+            //Get the Password
+            oPassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
+            byte[] decoderpass = Base64.getDecoder().decode("U3Jpbml2YXNrYWxsQDMzMw==");
+            oPassword.sendKeys(new String(decoderpass));
+            //get Password Button
+            signin = driver.findElement(By.xpath("//button[text()='Sign in']"));
+            signin.click();
+            //Get the Trail Button
+            
+//            trailbtn = driver.findElement(By.id("__xmlview0--cfTrialHeader"));
+//            trailbtn.click();
+    	}
+    	catch(Exception e) {
+    		System.out.println("Exception"+e);
+    	}
+    	
+    
+    
+    }
+}

@@ -1,0 +1,14 @@
+package com.testing.autotesting;
+
+/**
+ * Hello world!
+ *
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	 System.setProperty("webdriver.chrome.drive", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    }
+}

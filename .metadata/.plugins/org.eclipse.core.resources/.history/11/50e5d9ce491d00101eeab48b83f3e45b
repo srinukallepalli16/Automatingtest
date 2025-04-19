@@ -1,0 +1,11 @@
+package com.btptest.automatebtp;
+
+
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+    }
+}

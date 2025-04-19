@@ -1,0 +1,38 @@
+package com.btptest.automatebtp;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	try {
+    		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+            WebDriver driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.get("https://accounts.sap.com/oauth2/authorize?response_type=code&scope=openid+email+profile&redirect_uri=https%3A%2F%2Fcockpit.hanatrial.ondemand.com%2Flogin%2Fcallback&client_id=9868c363-bc2d-407f-bc14-2ef649230f6f&state=y7xk45KSWx_Oy49PzqsGrA&code_challenge=amBPGze5l7pqZw9sseVygpPh63jjU5mhHlv1ivgoghE&code_challenge_method=S256");
+            
+            WebDriverWait wait = new WebDriverWait(driver,20);
+            //Define the Fields
+            WebElement oUsername, oPassword,oBtn,signin; 
+            
+            oUsername = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("j_username")));
+            
+            
+    	}
+    	catch(Exception e) {
+    		System.out.println("Exception"+e);
+    	}
+    	
+    
+    
+    }
+}

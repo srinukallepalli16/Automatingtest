@@ -1,0 +1,31 @@
+package com.testing.autotesting;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	try {
+       	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+         WebDriver driver = new ChromeDriver();
+         //webdriver.chrome.driver
+         driver.manage().window().maximize();
+         driver.get("https://www.instagram.com/?flo=true");
+         WebElement firstname, lastname;
+    	}
+    	catch(Exception e) {
+    		System.out.println(e);
+    	}
+
+    
+    }
+}

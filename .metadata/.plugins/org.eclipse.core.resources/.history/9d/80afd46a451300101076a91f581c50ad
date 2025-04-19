@@ -1,0 +1,39 @@
+package com.testing.autotesting;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    	try {
+       	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinu\\OneDrive\\Desktop\\Automattest\\chromedriver-win64\\chromedriver.exe");
+         WebDriver driver = new ChromeDriver();
+         //webdriver.chrome.driver
+         driver.manage().window().maximize();
+         driver.get("https://www.tutorialspoint.com/selenium/practice/register.php");
+         WebElement firstname, lastname,username,password;
+         firstname = driver.findElement(By.id("firstname"));
+         firstname.sendKeys("Srinivas");
+         lastname = driver.findElement(By.id("lastname"));
+         lastname.sendKeys("Kallepalli");
+         username = driver.findElement(By.id("username"));
+         username.sendKeys("Srinivaskall16");
+         password = driver.findElement(By.id(""));
+    	}
+    	catch(Exception e) {
+    		System.out.println(e);
+    	}
+
+    
+    }
+}
