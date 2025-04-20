@@ -25,12 +25,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.btptest.automatebtp"/>
 			<item value="com.testing.autotesting"/>
 		</list>
 		<list key="groupId">
+			<item value="com.btptest"/>
 			<item value="com.testing"/>
 		</list>
 		<list key="artifactId">
+			<item value="automatebtp"/>
 			<item value="autotesting"/>
 		</list>
 		<list key="projectNameTemplate">

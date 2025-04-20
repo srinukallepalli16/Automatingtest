@@ -48,8 +48,7 @@ public class App
             trailbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("__xmlview0--cfTrialHeader")));
             trailbtn.click();
             
-            WebElement trail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='trial']")));
-            trail.click();
+            WebElement trail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='trail']")));
     	}
     	catch(Exception e) {
     		System.out.println("Exception"+e);
